@@ -13,7 +13,7 @@ class CalendarsController < ApplicationController
   end
 
   def new
-    @plan = Plan.newç
+    @plan = Plan.new
   end
 
   private
@@ -44,17 +44,7 @@ class CalendarsController < ApplicationController
         wday_num = wday_num -7
       end
 
-<<<<<<< HEAD
       days = { month: (@todays_date + x).month, date: (@todays_date + x).day, plans: today_plans, wday: wdays[wday_num] }
-=======
-      days = { :month => (@todays_date + x).month, :date => (@todays_date + x).day, :plans => today_plans, wdays => wday_num }
-
-      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans }
-
-<<<<<<< Updated upstream
-=======
->>>>>>> 5222b90f61393e2a166d9acd5a405747333fa901
->>>>>>> Stashed changes
       @week_days.push(days)
     end
   end
